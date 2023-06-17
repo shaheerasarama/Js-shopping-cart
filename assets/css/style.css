@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+button,a{
+    cursor: pointer;
+}
+/* satrt header */
+header{
+    background-color: #18181f;
+    color: white;
+    padding: 10px 0;
+}
+header a{
+    text-transform: capitalize;
+    font-size: 22px;
+    color: white;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li{
+    padding-right: 10px;
+}
+header nav ul li a{
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+#userinfo li a i{
+    position: relative;
+}
+#userinfo li a i span{
+    position: absolute;
+    font-size: 8px;
+    right: -10px;
+    background-color: #EB455F;
+    border-radius: 50%;
+    padding: 5px;
+    top: -10px;
+}
+/* end header */
+/* start search */
+.search input{
+    display: block;
+    width: 95%;
+    margin: auto;
+    padding: 10px 10px 10px 5px;
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+.Sprod{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    border: 2px solid #181823;
+    margin: 30px auto;;
+    justify-content: space-between;
+}
+.Sprod img{
+    max-width: 300px;
+}
+.Sprod .Sprod-text{
+    text-align: center;
+}
+.Sprod .Sprod-text p{
+    margin: 10px 0;
+}
+/* end search */
+/* start reg */
+.reg{
+    background-color: #6096B4;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 15px 10px;
+}
+.reg h3{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.reg form input,.reg form button{
+    display: block;
+    width: 90%;
+    margin: auto;
+    outline: none;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+/* end reg */
+/* start alert */
+#alert{
+    background-color: #EB455F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+.block{
+    display: block;
+}
+/* end alert */
+/* start prods */
+.prods{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+.prod{
+    width: 30%;
+    text-align: center;
+    border: 1px solid #181823;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    min-height: 150px;
+    position: relative;
+}
+.prod a{
+    color: #18181f;
+    font-size: 22px;
+    cursor: pointer;
+}
+.prod img{
+    width: 100%;
+}
+.prod p{
+    margin: 5px 0;
+}
+.prod button,.Sprod-text button{
+    font-family: 'Oswald', sans-serif;
+    padding: 5px 15px;
+    background-color: #181823;
+    border: white;
+    color: white;
+    text-transform: capitalize;
+}
+.prod span{
+    position: absolute;
+    background-color: #EB455F;
+    padding: 5px 15px;
+    color: white;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+/* end prods */
+
+/* start cart */
+.message{
+    background-color: #6096B4;
+    color: white;
+    width: 50%;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    margin: 20% auto;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.message a{
+    color: black;
+    text-decoration: underline;
+}
+#deleteBtn{
+    background-color: #d71332;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+/* end cart */
+/* start cartDet */
+#prodDet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#prodDet div{
+    margin: 50px;
+    background-color: #6096B4;
+    color: white;
+    padding-bottom: 20px;
+}
+#prodDet img{
+    width: 100%;  
+}
+#prodDet h2 {
+    text-transform: capitalize;
+}
+/* end cartDet */
+
+/* media */
+@media(max-width:521px){
+    .prod{
+        width: 100%;
+    }
+    .Sprod{
+        flex-direction: column;
+        width: 85%;
+        padding: 0 0 20px;
+    }
+    .Sprod img{
+        max-width: 100%;
+    }
+    .message{
+        width: 100%;
+    }
+}
+@media(min-width:522px) and (max-width:922px){
+    .prod{
+        width: 48%;
+    }
+    .Sprod{
+        flex-direction: column;
+        width: 70%;
+        padding: 0 0 20px;
+    }
+    .Sprod img{
+        max-width: 100%;
+    }
+    .message{
+        width: 100%;
+    }
+}
